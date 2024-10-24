@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-ig02+%&db$7=@uy#*h+m%i!f4!kcfnfi8ln8&!()e9i&r-)suw
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['moviesapi-1bux.onrender.com', '127.0.0.1', 'localhost']
 
 
 # Application definition
