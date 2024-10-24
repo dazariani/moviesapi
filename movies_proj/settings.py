@@ -165,7 +165,7 @@ STATICFILES_DIRS = (
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ALLOWED_ORIGINS = [
-  "http://localhost:5173/",
+  "http://localhost:5173",
   "https://movieclub-d9mb.onrender.com"
 ]
 CORS_ALLOW_CREDENTIALS = True
