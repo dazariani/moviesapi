@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-ig02+%&db$7=@uy#*h+m%i!f4!kcfnfi8ln8&!()e9i&r-)suw'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['moviesapi-1bux.onrender.com', '127.0.0.1', 'localhost']
 
@@ -147,17 +147,16 @@ DATETIME_INPUT_FORMATS = '%Y-%m-%d %H:%M:%S'
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
-STATIC_URL = 'static/'
-STATIC_ROOT = BASE_DIR / "staticfiles"
+
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
-MEDIA_URL = '/media/'
+STATIC_URL = '/media/'
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'media')
+]
 
-# MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+STATIC_ROOT = BASE_DIR / "staticfiles"
 
-STATICFILES_DIRS = (
-  os.path.join(BASE_DIR, 'static'),
-)
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
